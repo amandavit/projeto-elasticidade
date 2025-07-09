@@ -75,6 +75,8 @@ plt.xlabel('Receita Total')
 plt.ylabel('SKU_Nome')
 plt.show()
 ```
+<img src="top10_sku.png" alt="top10_sku" width="600" height="500">
+
 Criando um df só com os Top 10 SKUs em Receita.
 
 ```bash
@@ -94,6 +96,8 @@ plt.xlabel('SKU_Nome')
 plt.ylabel('PVM')
 plt.show()
 ```
+<img src="distribuicao_preco.png" alt="distribuicao_preco" width="600" height="500">
+
 Com essa arquitetura percebemos variações entre SKUs, como por exemplo, Produto 333 e Produto 37 com medianas altas, ao contrário do Produto 6. 
 
 Importante é a amplitude interquatil (tamanho da caixa) que indicam variabilidade de Preços. Produtos como Produto 24 e Produto 37 têm amplitude maior, sugerindo preços menos consistentes. Veja que o Produto 333 tem preços mais altos, porém uma menor amplitude, indicando menos volatilidade.
@@ -160,14 +164,13 @@ plt.xlabel('log(PVM)')
 plt.ylabel('log(Qty)')
 plt.show()
 ```
+<img src="sku_elastico.png" alt="sku_elastico" width="600" height="500">
 
 Aqui plotamos o gráfico de Regressão do Produto 24, escolhido por ser nosso produto mais elástico do dataset. 
-
 
 Veja que a linha tem coeficiente negativo, isso indica que um aumento no preço provoca um grande queda na quantidade de demanda.
 
 Em números, sendo sua Elasticity = -3.65, aumentar o preço em 1% as vendas caem -%3,65. Em contrapartidade diminuir o preço em 1% as vendas aumento +3,65%.
-
 
 ### 5. Conclusão
 
